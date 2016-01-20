@@ -8,8 +8,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    private int counter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        this.counter = 0;
+        this.setText();
     }
 
     @Override
@@ -52,9 +56,18 @@ public class MainActivity extends AppCompatActivity {
 
     public void buttonOnClickPlus(View v) {
         // do something when the button is clicked
+        this.counter++;
+        this.setText();
     }
 
     public void buttonOnClickMinus(View v) {
         // do something when the button is clicked
+        this.counter--;
+        this.setText();
+    }
+
+    private void setText() {
+        TextView myTextView = (TextView) findViewById(R.id.textView);
+        myTextView.setText(" ~ " + this.counter + " ~ ");
     }
 }
