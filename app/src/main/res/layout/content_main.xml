@@ -13,29 +13,31 @@
     tools:showIn="@layout/activity_main">
 
     <Button
+        android:id="@+id/plusButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=" + "
-        android:id="@+id/plusButton"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="150dp" />
+        android:layout_marginTop="150dp"
+        android:onClick="buttonOnClickPlus"
+        android:text="@string/plusButton" />
 
     <TextView
+        android:id="@+id/textValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Value"
-        android:id="@+id/textValue"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true" />
+        android:layout_centerVertical="true"
+        android:text="Value"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <Button
+        android:id="@+id/minusButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=" - "
-        android:id="@+id/minusButton"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="150dp" />
+        android:layout_marginBottom="150dp"
+        android:onClick="buttonOnClickMinus"
+        android:text="@string/minusButton" />
 </RelativeLayout>
